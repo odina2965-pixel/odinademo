@@ -1,0 +1,9 @@
+# The deployable app lives in mysql-demo/: a static index.html plus a
+# Netlify Function (netlify/functions/api.mjs). There is no framework and no
+# build step — Netlify installs the function's npm dependency (mysql2) from
+# mysql-demo/package.json and bundles the function automatically.
+[build]
+  base = "mysql-demo"
+  # publish and functions are relative to the base directory
+  publish = "."
+  functions = "netlify/functions"
